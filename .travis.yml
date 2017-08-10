@@ -1,0 +1,22 @@
+language: python
+python:
+- '2.6'
+- '2.7'
+install:
+- python setup.py install
+- pip freeze
+- pip install pep8
+before_script:
+- pep8 migrate_tool --max-line-length=140
+script:
+- nosetests
+deploy:
+  provider: pypi
+  user: liuchang0812
+  password:
+    secure: y32MZMmoaH8RM9UwKwI49AUe3rDaq8w5vv7m8dWgzWxbKtP/zFEWwOasxzNr0gKno5NQQkWRrap1tXnt9j61Gg02/0X5osEL+/JCyH45A4IyAXNrrdtp3c8DvIGh5t58+jTzAZ6UXI3RpP7bqvTMOymvd+YpLeaZCGZxpcgnUR9HDIp4/i3LvlUSQDQDYOwOJL5WEdGmNvlzUZj9hZQ4EXSmiNNd24IVSKgb0HINYAjHYij/Yp9njhqva50vonVpt2fhR1FQYK/JrP/4ScIcj1VDaB5ZLI2z2lnfvsACU2ili25PLFn0PwMdN5JNo7GA3zkBvWBBtCql6F73Z9lGRQ89Dnpy28gYr/Syeq6XnDnw16BzUHDyWIqjTXXcZcwguEn/G+Qfv8UWpH4pXardmgSU7eEvINjPMpBPsgmB8TS91EAtY5vFlcnrtiT7Wv2hk1PVJIwtTGXAUxYx7IpLHYdD+ZC0fSpC0NT3bErtvNVtRl1EgKluBid/KBoYGoD3aIOBHriWCRCPByqfQQM7UDaJKkhMqdLTUbhNYAlg5Rw42ALg+HbyZ8bWCtCosqwCBCqhqCksmhcsqwL3r7RYn0GYcQOuqAjoJrI8osDKH8OUxPnPf0YeG0RZAWtxzeqoAS58I5tN9fj6p7VJBJILmlLn1Obc4uAwzD5XUAYFG98=
+  distributions: sdist bdist_wheel
+  on:
+    tags: true
+    branch: master
+    repo: tencentyun/cos_migrate_tool

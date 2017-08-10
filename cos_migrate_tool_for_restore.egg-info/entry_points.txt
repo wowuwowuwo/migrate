@@ -1,0 +1,13 @@
+[console_scripts]
+cos_migrate_tool_for_restore = migrate_tool.main:main_
+
+[storage_services]
+coss3 = migrate_tool.services.coss3:CosS3StorageService
+cosv3 = migrate_tool.services.cosv3:CosV3StorageService
+cosv4 = migrate_tool.services.cosv4:CosV4StorageService
+localfs = migrate_tool.services.LocalFileSystem:LocalFileSystem
+oss = migrate_tool.services.oss:OssStorageService
+qiniu = migrate_tool.services.qiniu:QiniuStorageService
+s3 = migrate_tool.services.s3:S3StorageService
+url = migrate_tool.services.url_list:UrlListService
+

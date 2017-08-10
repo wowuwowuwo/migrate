@@ -1,0 +1,1 @@
+pkill cos_migrate_tool_for_restore
