@@ -197,9 +197,6 @@ class ThreadMigrator(BaseMigrator):
                 # step 3, add task to real task queue
                 # flow control for running task queue
                 while True:
-                    if self._stop:
-                        break
-
                     if self._task_queue.qsize() > self._max_task_queue_size:
                         logger.info("running task queue len: %d, larger than max size: %d, sleep 3 second...",
                                     self._task_queue.qsize(), self._max_task_queue_size)
@@ -212,7 +209,6 @@ class ThreadMigrator(BaseMigrator):
                         break
                     # self._worker.add_task(task)
                     # logger.info("add task: %s, to running task queue done", task.key)
-                    break
                 pass
         except Exception as e:
             logger.exception(str(e))

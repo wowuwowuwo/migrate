@@ -152,6 +152,7 @@ def restore_check_thread(share_queue, lock, work_dir, output_service, input_serv
             break
         logger.info("restore_check_process is working, sleep 3 seconds")
         time.sleep(3)
+    migrator.stop()
     pass
 
 logger = getLogger(__name__)
