@@ -92,10 +92,10 @@ class CosV4StorageService(storage_service.StorageService):
                 upload_file_ret = self._cos_api.upload_file(upload_request)
 
                 if upload_file_ret[u'code'] != 0:
-                    logger.warn("upload failed:" + str(upload_file_ret))
+                    logger.warn("error: cos path: %s, upload failed: %s", cos_path, str(upload_file_ret))
                     raise OSError("UploadError: " + str(upload_file_ret))
                 else:
-                    logger.info("upload task: %s, to cos success, break", task.key)
+                    logger.info("upload task: %s, to cos path: %s, success, break", task.key, cos_path)
                     break
             except Exception as e:
                 logger.error("try: %d, error: %s", i, str(e))

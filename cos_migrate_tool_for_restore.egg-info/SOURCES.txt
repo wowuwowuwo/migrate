@@ -1,5 +1,6 @@
 MANIFEST.in
 README.rst
+man.txt
 requirements.txt
 setup.py
 cos_migrate_tool_for_restore.egg-info/PKG-INFO

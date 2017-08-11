@@ -11,7 +11,6 @@ from threading import Timer, Thread
 
 from Queue import Queue, Empty
 
-from migrate_tool.worker import Worker
 from migrate_tool.filter import Filter
 
 logger = getLogger(__name__)
@@ -43,7 +42,7 @@ class ThreadMigrator(BaseMigrator):
 
     """
 
-    def __init__(self, input_service, output_service, work_dir=None, threads=10, *args, **kwargs):
+    def __init__(self, input_service, output_service, work_dir=None, threads=10, share_q=None, *args, **kwargs):
 
         self._input_service = input_service
         self._output_service = output_service
@@ -51,67 +50,28 @@ class ThreadMigrator(BaseMigrator):
         self._work_dir = work_dir or os.getcwd()
         self._filter = Filter(self._work_dir)
 
-        self._worker = Worker(work_dir=self._work_dir,
-                              file_filter=self._filter,
-                              input_service=self._input_service,
-                              output_service=self._output_service,
-                              threads_num=threads)
-
         self._stop = False
         self._finish = False
         self._threads = []
 
+        self._sleep_seconds = 6
         self._max_task_queue_size = 1000
 
         self._restore_prefix = 'restore_'
         self._max_restore_check_queue_size = 1000
+        
         # todo, set maxsize to 0
         self._restore_check_queue = Queue(maxsize=0)
 
-        # if path.exists(path.join(self._work_dir, 'filter.json')):
-        #    with open(path.join(self._work_dir, 'filter.json'), 'r') as f:
-        #       self._filter.loads(f.read())
-        #        logger.info("loads bloom filter snapshot successfully.")
-
-    def log_status_thread(self):
-        while not self._stop:
-            logger.info("working, {} tasks successfully, {} tasks failed.".format(self._worker.success_num,
-                                                                                  self._worker.failure_num))
-            time.sleep(3)
-
-    # def work_thread(self):
-    #     assert self._output_service is not None
-    #     try:
-    #         for task in self._output_service.list():
-    #
-    #             if self._stop:
-    #                 break
-    #
-    #             # print type(task)
-    #             object_name_ = task.key
-    #             if isinstance(object_name_, unicode):
-    #                 object_name_ = object_name_.encode('utf-8')
-    #
-    #             if self._filter.query(object_name_):
-    #                 # object had been migrated
-    #                 logger.info("{} has been migrated, skip it".format(object_name_))
-    #
-    #             else:
-    #                 # not migrated
-    #                 self._worker.add_task(task)
-    #                 logger.info("{} has been submitted, waiting for migrating".format(object_name_))
-    #         else:
-    #             self._finish = True
-    #     except Exception as e:
-    #         self._finish = True
-    #         logger.exception(str(e))
+        # running task queue between multi processes
+        self._task_queue = share_q
 
     def restore_thread(self):
         assert self._output_service is not None
         try:
             for task in self._output_service.list():
-
                 if self._stop:
+                    logger.info("stop flag is true, restore thread will exit")
                     break
 
                 # step 0, flow control for restore check queue
@@ -119,9 +79,9 @@ class ThreadMigrator(BaseMigrator):
                     if self._stop:
                         break
                     if self._restore_check_queue.qsize() > self._max_restore_check_queue_size:
-                        logger.info("restore check queue len: %d, larger than max size: %d, sleep 1 second...",
+                        logger.info("restore check queue len: %d, larger than max size: %d, sleep 3 second...",
                                     self._restore_check_queue.qsize(), self._max_restore_check_queue_size)
-                        time.sleep(1)
+                        time.sleep(self._sleep_seconds)
                         continue
                     else:
                         break
@@ -132,7 +92,9 @@ class ThreadMigrator(BaseMigrator):
                     object_name_ = object_name_.encode('utf-8')
 
                 # step 1, check filter to see if real task done or not
-                if self._filter.query(object_name_):
+                # todo, or use inputservice to check, [name, size, etag]
+                # if self._filter.query(object_name_):
+                if self._input_service.exists(task):
                     # object had been migrated
                     logger.info("{} has been migrated, skip it".format(object_name_))
                     continue
@@ -165,9 +127,10 @@ class ThreadMigrator(BaseMigrator):
                         continue
                 # step 3, add to restore check queue
                 self._restore_check_queue.put(task)
-                logger.info("add task: %s, to restore check queue done", object_name_)
+                logger.info("add task: %s, to restore check queue done, queue size: %d",
+                            object_name_, self._restore_check_queue.qsize())
             else:
-                logger.info("all task has been submitted, restore thread will exit")
+                logger.info("all task has been submitted or stop flag is true, restore thread will exit")
                 self._finish = True
         except Exception as e:
             self._finish = True
@@ -181,6 +144,10 @@ class ThreadMigrator(BaseMigrator):
                 if self._stop:
                     logger.info("stop flag is true, check thread will exit")
                     break
+                if self.is_finish_normal():
+                    logger.info("finish normal: restore thread is finish and check queue is empty, "
+                                "so check thread will exit too")
+                    break
 
                 try:
                     # logger.debug("try to get task")
@@ -188,13 +155,16 @@ class ThreadMigrator(BaseMigrator):
                     # logger.debug("get task successfully")
                     self._restore_check_queue.task_done()
                 except Empty:
-                    logger.debug("Empty restore check queue, will sleep 1 second")
-                    time.sleep(1)
+                    logger.debug("restore check queue is empty, will sleep 3 second")
+                    time.sleep(self._sleep_seconds)
                     continue
 
                 object_name_ = task.key
                 if isinstance(object_name_, unicode):
                     object_name_ = object_name_.encode('utf-8')
+
+                logger.info("get task: %s, from restore check queue done, queue size: %d",
+                            object_name_, self._restore_check_queue.qsize())
 
                 # step 1, check restore success or not
                 ret = self._output_service.restore(task.key)
@@ -230,29 +200,25 @@ class ThreadMigrator(BaseMigrator):
                     if self._stop:
                         break
 
-                    if self._worker._queue.qsize() > self._max_task_queue_size:
-                        logger.info("running task queue len: %d, larger than max size: %d, sleep 1 second...",
-                                    self._worker._queue.qsize(), self._max_task_queue_size)
-                        time.sleep(1)
+                    if self._task_queue.qsize() > self._max_task_queue_size:
+                        logger.info("running task queue len: %d, larger than max size: %d, sleep 3 second...",
+                                    self._task_queue.qsize(), self._max_task_queue_size)
+                        time.sleep(self._sleep_seconds)
                         continue
                     else:
-                        self._worker.add_task(task)
-                        logger.info("add task: %s, to running task queue done", task.key)
+                        self._task_queue.put(task)
+                        logger.info("add task: %s, to running task queue done, running task queue size: %d",
+                                    task.key, self._task_queue.qsize())
                         break
+                    # self._worker.add_task(task)
+                    # logger.info("add task: %s, to running task queue done", task.key)
+                    break
                 pass
         except Exception as e:
             logger.exception(str(e))
         pass
 
     def start(self):
-        log_status_thread = Thread(target=self.log_status_thread, name='log_status_thread')
-        log_status_thread.daemon = True
-        self._threads.append(log_status_thread)
-
-        # work_thread = Thread(target=self.work_thread, name='work_thread')
-        # work_thread.daemon = True
-        # self._threads.append(work_thread)
-
         # create restore thread
         restore_thread = Thread(target=self.restore_thread, name='restore_thread')
         restore_thread.daemon = True
@@ -266,21 +232,15 @@ class ThreadMigrator(BaseMigrator):
         for t in self._threads:
             t.start()
 
-        self._worker.start()
+    def is_finish_normal(self):
+        if self._finish and self._restore_check_queue.empty():
+            return True
+        return False
 
     def stop(self, force=False):
-        if force:
-            self._worker.term()
-        else:
-            self._worker.stop()
-
         self._stop = True
-
         for t in self._threads:
             t.join()
-
-    def status(self):
-        return {'success': self._worker.success_num, 'fail': self._worker.failure_num, 'finish': self._finish}
 
 if __name__ == '__main__':
     from migrate_tool.services.LocalFileSystem import LocalFileSystem

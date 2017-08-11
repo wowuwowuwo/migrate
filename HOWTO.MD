@@ -93,7 +93,7 @@ accesskeyid=               # cos 的 secretid
 appid=                     # cos 的 appid
 accesskeysecret=           # cos 的 secretkey
 bucket=sdktest             # cos 的 bucket
-prefix_dir=/dir21/         # cos 的目录，迁移的文件都会位于该目录下，不配置该项则迁移到根目录
+prefix_dir=/dir21         # cos 的目录，迁移的文件都会位于该目录下，不配置该项则迁移到根目录
 overwrite=true             # 覆盖cos上已有的同名文件，如果不需要，请删除该行
 ```
 
@@ -120,7 +120,7 @@ accesskeyid=               # cos 的 secretid
 appid=                     # cos 的 appid
 accesskeysecret=           # cos 的 secretkey
 bucket=sdktest             # cos 的 bucket
-prefix_dir=/dir21/         # cos 的目录，迁移的文件都会位于该目录下，不配置该项则迁移到根目录
+prefix_dir=/dir21         # cos 的目录，迁移的文件都会位于该目录下，不配置该项则迁移到根目录
 overwrite=true             # 是否覆盖上传，如果不需要，删除此行
 ```
 
@@ -223,7 +223,7 @@ region=
 appid=
 accesskeysecret=
 bucket=         
-prefix_dir=/foo/   # cos 的目录，迁移的文件都会位于该目录下，不配置该项则迁移到根目录
+prefix_dir=/foo   # cos 的目录，迁移的文件都会位于该目录下，不配置该项则迁移到根目录
 
 [destination]
 type=cosv4

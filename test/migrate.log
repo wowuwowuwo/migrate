@@ -1,311 +1,883 @@
-2017-08-10 19:30:56,288 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
-2017-08-10 19:30:56,709 - oss.py:56 - migrate_tool.services.oss - yield new object: OAS_Python_SDK_0.2.5.zip
-2017-08-10 19:30:56,709 - oss.py:62 - migrate_tool.services.oss - restore new object: OAS_Python_SDK_0.2.5.zip
-2017-08-10 19:30:56,755 - migrator.py:162 - migrate_tool.migrator - submit task: OAS_Python_SDK_0.2.5.zip, ret 200, already restore 
-2017-08-10 19:30:56,755 - migrator.py:168 - migrate_tool.migrator - add task: OAS_Python_SDK_0.2.5.zip, to restore check queue done
-2017-08-10 19:30:56,756 - oss.py:56 - migrate_tool.services.oss - yield new object: ParallelsDesktop-12.2.1-41615.dmg
-2017-08-10 19:30:56,756 - oss.py:62 - migrate_tool.services.oss - restore new object: ParallelsDesktop-12.2.1-41615.dmg
-2017-08-10 19:30:57,081 - migrator.py:162 - migrate_tool.migrator - submit task: ParallelsDesktop-12.2.1-41615.dmg, ret 200, already restore 
-2017-08-10 19:30:57,082 - migrator.py:168 - migrate_tool.migrator - add task: ParallelsDesktop-12.2.1-41615.dmg, to restore check queue done
-2017-08-10 19:30:57,082 - oss.py:56 - migrate_tool.services.oss - yield new object: QQ_V6.0.1.dmg
-2017-08-10 19:30:57,082 - oss.py:62 - migrate_tool.services.oss - restore new object: QQ_V6.0.1.dmg
-2017-08-10 19:30:57,309 - oss.py:62 - migrate_tool.services.oss - restore new object: OAS_Python_SDK_0.2.5.zip
-2017-08-10 19:30:57,410 - migrator.py:162 - migrate_tool.migrator - submit task: QQ_V6.0.1.dmg, ret 200, already restore 
-2017-08-10 19:30:57,411 - migrator.py:168 - migrate_tool.migrator - add task: QQ_V6.0.1.dmg, to restore check queue done
-2017-08-10 19:30:57,411 - oss.py:56 - migrate_tool.services.oss - yield new object: VSCode-darwin-stable.zip
-2017-08-10 19:30:57,411 - oss.py:62 - migrate_tool.services.oss - restore new object: VSCode-darwin-stable.zip
-2017-08-10 19:30:57,631 - migrator.py:218 - migrate_tool.migrator - check task: OAS_Python_SDK_0.2.5.zip, ret 200, restore finished, will put it to running task queue
-2017-08-10 19:30:57,631 - migrator.py:240 - migrate_tool.migrator - add task: OAS_Python_SDK_0.2.5.zip, to running task queue done
-2017-08-10 19:30:57,631 - oss.py:62 - migrate_tool.services.oss - restore new object: ParallelsDesktop-12.2.1-41615.dmg
-2017-08-10 19:30:57,719 - migrator.py:218 - migrate_tool.migrator - check task: ParallelsDesktop-12.2.1-41615.dmg, ret 200, restore finished, will put it to running task queue
-2017-08-10 19:30:57,719 - migrator.py:240 - migrate_tool.migrator - add task: ParallelsDesktop-12.2.1-41615.dmg, to running task queue done
-2017-08-10 19:30:57,719 - oss.py:62 - migrate_tool.services.oss - restore new object: QQ_V6.0.1.dmg
-2017-08-10 19:30:57,747 - migrator.py:162 - migrate_tool.migrator - submit task: VSCode-darwin-stable.zip, ret 200, already restore 
-2017-08-10 19:30:57,747 - migrator.py:168 - migrate_tool.migrator - add task: VSCode-darwin-stable.zip, to restore check queue done
-2017-08-10 19:30:57,747 - oss.py:56 - migrate_tool.services.oss - yield new object: Wireshark 2.2.7 Intel 64.dmg
-2017-08-10 19:30:57,748 - oss.py:62 - migrate_tool.services.oss - restore new object: Wireshark 2.2.7 Intel 64.dmg
-2017-08-10 19:30:57,843 - migrator.py:218 - migrate_tool.migrator - check task: QQ_V6.0.1.dmg, ret 200, restore finished, will put it to running task queue
-2017-08-10 19:30:57,843 - migrator.py:240 - migrate_tool.migrator - add task: QQ_V6.0.1.dmg, to running task queue done
-2017-08-10 19:30:57,844 - oss.py:62 - migrate_tool.services.oss - restore new object: VSCode-darwin-stable.zip
-2017-08-10 19:30:58,052 - migrator.py:162 - migrate_tool.migrator - submit task: Wireshark 2.2.7 Intel 64.dmg, ret 200, already restore 
-2017-08-10 19:30:58,052 - migrator.py:168 - migrate_tool.migrator - add task: Wireshark 2.2.7 Intel 64.dmg, to restore check queue done
-2017-08-10 19:30:58,052 - oss.py:56 - migrate_tool.services.oss - yield new object: charles-proxy-4.1.3.dmg
-2017-08-10 19:30:58,052 - oss.py:62 - migrate_tool.services.oss - restore new object: charles-proxy-4.1.3.dmg
-2017-08-10 19:30:58,139 - migrator.py:162 - migrate_tool.migrator - submit task: charles-proxy-4.1.3.dmg, ret 200, already restore 
-2017-08-10 19:30:58,139 - migrator.py:168 - migrate_tool.migrator - add task: charles-proxy-4.1.3.dmg, to restore check queue done
-2017-08-10 19:30:58,140 - oss.py:56 - migrate_tool.services.oss - yield new object: ossutilmac64
-2017-08-10 19:30:58,140 - oss.py:62 - migrate_tool.services.oss - restore new object: ossutilmac64
-2017-08-10 19:30:58,259 - migrator.py:218 - migrate_tool.migrator - check task: VSCode-darwin-stable.zip, ret 200, restore finished, will put it to running task queue
-2017-08-10 19:30:58,259 - migrator.py:240 - migrate_tool.migrator - add task: VSCode-darwin-stable.zip, to running task queue done
-2017-08-10 19:30:58,259 - oss.py:62 - migrate_tool.services.oss - restore new object: Wireshark 2.2.7 Intel 64.dmg
-2017-08-10 19:30:58,350 - migrator.py:218 - migrate_tool.migrator - check task: Wireshark 2.2.7 Intel 64.dmg, ret 200, restore finished, will put it to running task queue
-2017-08-10 19:30:58,350 - migrator.py:240 - migrate_tool.migrator - add task: Wireshark 2.2.7 Intel 64.dmg, to running task queue done
-2017-08-10 19:30:58,350 - oss.py:62 - migrate_tool.services.oss - restore new object: charles-proxy-4.1.3.dmg
-2017-08-10 19:30:58,425 - migrator.py:162 - migrate_tool.migrator - submit task: ossutilmac64, ret 200, already restore 
-2017-08-10 19:30:58,426 - migrator.py:168 - migrate_tool.migrator - add task: ossutilmac64, to restore check queue done
-2017-08-10 19:30:58,426 - oss.py:56 - migrate_tool.services.oss - yield new object: protobuf-2.5.0.tar.gz
-2017-08-10 19:30:58,426 - oss.py:62 - migrate_tool.services.oss - restore new object: protobuf-2.5.0.tar.gz
-2017-08-10 19:30:58,460 - oss.py:27 - migrate_tool.services.oss - download file: OAS_Python_SDK_0.2.5.zip, with retry 0
-2017-08-10 19:30:58,462 - oss.py:27 - migrate_tool.services.oss - download file: QQ_V6.0.1.dmg, with retry 0
-2017-08-10 19:30:58,464 - worker.py:67 - migrate_tool.worker - VSCode-darwin-stable.zip exists
-2017-08-10 19:30:58,470 - migrator.py:218 - migrate_tool.migrator - check task: charles-proxy-4.1.3.dmg, ret 200, restore finished, will put it to running task queue
-2017-08-10 19:30:58,472 - oss.py:27 - migrate_tool.services.oss - download file: ParallelsDesktop-12.2.1-41615.dmg, with retry 0
-2017-08-10 19:30:58,472 - migrator.py:240 - migrate_tool.migrator - add task: charles-proxy-4.1.3.dmg, to running task queue done
-2017-08-10 19:30:58,475 - oss.py:62 - migrate_tool.services.oss - restore new object: ossutilmac64
-2017-08-10 19:30:58,517 - worker.py:67 - migrate_tool.worker - Wireshark 2.2.7 Intel 64.dmg exists
-2017-08-10 19:30:58,517 - migrator.py:162 - migrate_tool.migrator - submit task: protobuf-2.5.0.tar.gz, ret 200, already restore 
-2017-08-10 19:30:58,517 - migrator.py:168 - migrate_tool.migrator - add task: protobuf-2.5.0.tar.gz, to restore check queue done
-2017-08-10 19:30:58,518 - oss.py:56 - migrate_tool.services.oss - yield new object: 【MNET2.0】【使用教程】MAC机使用MNET2.0【LINUX】.docx
-2017-08-10 19:30:58,518 - oss.py:62 - migrate_tool.services.oss - restore new object: 【MNET2.0】【使用教程】MAC机使用MNET2.0【LINUX】.docx
-2017-08-10 19:30:58,568 - worker.py:67 - migrate_tool.worker - charles-proxy-4.1.3.dmg exists
-2017-08-10 19:30:58,788 - migrator.py:218 - migrate_tool.migrator - check task: ossutilmac64, ret 200, restore finished, will put it to running task queue
-2017-08-10 19:30:58,788 - migrator.py:240 - migrate_tool.migrator - add task: ossutilmac64, to running task queue done
-2017-08-10 19:30:58,788 - oss.py:62 - migrate_tool.services.oss - restore new object: protobuf-2.5.0.tar.gz
-2017-08-10 19:30:58,823 - migrator.py:162 - migrate_tool.migrator - submit task: 【MNET2.0】【使用教程】MAC机使用MNET2.0【LINUX】.docx, ret 200, already restore 
-2017-08-10 19:30:58,823 - migrator.py:168 - migrate_tool.migrator - add task: 【MNET2.0】【使用教程】MAC机使用MNET2.0【LINUX】.docx, to restore check queue done
-2017-08-10 19:30:58,823 - oss.py:56 - migrate_tool.services.oss - yield new object: 陈海亮_硕士_5年经验_后台开发c++.pdf
-2017-08-10 19:30:58,823 - oss.py:62 - migrate_tool.services.oss - restore new object: 陈海亮_硕士_5年经验_后台开发c++.pdf
-2017-08-10 19:30:58,858 - oss.py:44 - migrate_tool.services.oss - download: OAS_Python_SDK_0.2.5.zip, Successfully, break
-2017-08-10 19:30:58,858 - worker.py:83 - migrate_tool.worker - download task: OAS_Python_SDK_0.2.5.zip, size: 39414, to local path: ./work/615313577dbf11e7b9c93c15c2d12610, success
-2017-08-10 19:30:58,878 - migrator.py:218 - migrate_tool.migrator - check task: protobuf-2.5.0.tar.gz, ret 200, restore finished, will put it to running task queue
-2017-08-10 19:30:58,878 - migrator.py:240 - migrate_tool.migrator - add task: protobuf-2.5.0.tar.gz, to running task queue done
-2017-08-10 19:30:58,878 - oss.py:62 - migrate_tool.services.oss - restore new object: 【MNET2.0】【使用教程】MAC机使用MNET2.0【LINUX】.docx
-2017-08-10 19:30:58,912 - migrator.py:162 - migrate_tool.migrator - submit task: 陈海亮_硕士_5年经验_后台开发c++.pdf, ret 200, already restore 
-2017-08-10 19:30:58,912 - migrator.py:168 - migrate_tool.migrator - add task: 陈海亮_硕士_5年经验_后台开发c++.pdf, to restore check queue done
-2017-08-10 19:30:58,912 - migrator.py:170 - migrate_tool.migrator - all task has been submitted, restore thread will exit
-2017-08-10 19:30:58,924 - migrator.py:218 - migrate_tool.migrator - check task: 【MNET2.0】【使用教程】MAC机使用MNET2.0【LINUX】.docx, ret 200, restore finished, will put it to running task queue
-2017-08-10 19:30:58,924 - migrator.py:240 - migrate_tool.migrator - add task: 【MNET2.0】【使用教程】MAC机使用MNET2.0【LINUX】.docx, to running task queue done
-2017-08-10 19:30:58,924 - oss.py:62 - migrate_tool.services.oss - restore new object: 陈海亮_硕士_5年经验_后台开发c++.pdf
-2017-08-10 19:30:59,022 - migrator.py:218 - migrate_tool.migrator - check task: 陈海亮_硕士_5年经验_后台开发c++.pdf, ret 200, restore finished, will put it to running task queue
-2017-08-10 19:30:59,023 - migrator.py:240 - migrate_tool.migrator - add task: 陈海亮_硕士_5年经验_后台开发c++.pdf, to running task queue done
-2017-08-10 19:30:59,078 - cosv4.py:98 - migrate_tool.services.cosv4 - upload task: OAS_Python_SDK_0.2.5.zip, to cos success, break
-2017-08-10 19:30:59,078 - worker.py:93 - migrate_tool.worker - upload task: OAS_Python_SDK_0.2.5.zip, size: 39414, from local path: ./work/615313577dbf11e7b9c93c15c2d12610, success
-2017-08-10 19:30:59,079 - worker.py:109 - migrate_tool.worker - remove task: OAS_Python_SDK_0.2.5.zip, size: 39414, file local path: ./work/615313577dbf11e7b9c93c15c2d12610, success
-2017-08-10 19:30:59,079 - worker.py:112 - migrate_tool.worker - inc succ with OAS_Python_SDK_0.2.5.zip
-2017-08-10 19:30:59,142 - worker.py:67 - migrate_tool.worker - ossutilmac64 exists
-2017-08-10 19:30:59,204 - worker.py:67 - migrate_tool.worker - protobuf-2.5.0.tar.gz exists
-2017-08-10 19:30:59,273 - worker.py:67 - migrate_tool.worker - 【MNET2.0】【使用教程】MAC机使用MNET2.0【LINUX】.docx exists
-2017-08-10 19:30:59,299 - migrator.py:79 - migrate_tool.migrator - working, 7 tasks successfully, 0 tasks failed.
-2017-08-10 19:30:59,311 - worker.py:150 - migrate_tool.worker - try to stop migrate process.
-2017-08-10 19:30:59,569 - worker.py:67 - migrate_tool.worker - 陈海亮_硕士_5年经验_后台开发c++.pdf exists
-2017-08-10 19:31:02,304 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:31:05,307 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:31:08,309 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:31:11,312 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:31:14,315 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:31:17,321 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:31:20,323 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:31:23,328 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:31:26,332 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:31:29,334 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:31:32,337 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:31:35,342 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:31:38,343 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:31:41,348 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:31:44,349 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:31:47,352 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:31:50,355 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:31:53,356 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:31:56,358 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:31:59,358 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:32:02,361 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:32:05,366 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:32:08,366 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:32:11,367 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:32:14,372 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:32:17,374 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:32:20,377 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:32:23,382 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:32:26,388 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:32:29,341 - oss.py:44 - migrate_tool.services.oss - download: QQ_V6.0.1.dmg, Successfully, break
-2017-08-10 19:32:29,341 - worker.py:83 - migrate_tool.worker - download task: QQ_V6.0.1.dmg, size: 43455703, to local path: ./work/6153425e7dbf11e793513c15c2d12610, success
-2017-08-10 19:32:29,393 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:32:29,435 - cos_op.py:382 - qcloud_cos.cos_op - upload file serially
-2017-08-10 19:32:32,395 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:32:35,399 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:32:38,402 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:32:41,404 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:32:44,404 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:32:47,405 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:32:50,406 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:32:53,409 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:32:56,410 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:32:59,415 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:33:02,419 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:33:05,420 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:33:08,420 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:33:11,421 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:33:14,426 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:33:17,427 - migrator.py:79 - migrate_tool.migrator - working, 8 tasks successfully, 0 tasks failed.
-2017-08-10 19:33:17,941 - cosv4.py:98 - migrate_tool.services.cosv4 - upload task: QQ_V6.0.1.dmg, to cos success, break
-2017-08-10 19:33:17,942 - worker.py:93 - migrate_tool.worker - upload task: QQ_V6.0.1.dmg, size: 43455703, from local path: ./work/6153425e7dbf11e793513c15c2d12610, success
-2017-08-10 19:33:17,948 - worker.py:109 - migrate_tool.worker - remove task: QQ_V6.0.1.dmg, size: 43455703, file local path: ./work/6153425e7dbf11e793513c15c2d12610, success
-2017-08-10 19:33:17,948 - worker.py:112 - migrate_tool.worker - inc succ with QQ_V6.0.1.dmg
-2017-08-10 19:33:20,432 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:33:23,433 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:33:26,437 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:33:29,440 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:33:32,445 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:33:35,446 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:33:38,446 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:33:41,449 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:33:44,453 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:33:47,455 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:33:50,458 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:33:53,461 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:33:56,466 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:33:59,470 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:34:02,472 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:34:05,474 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:34:08,476 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:34:11,476 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:34:14,479 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:34:17,482 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:34:20,483 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:34:23,487 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:34:26,491 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:34:29,492 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:34:32,494 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:34:35,499 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:34:38,500 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:34:41,505 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:34:44,511 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:34:47,513 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:34:50,516 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:34:53,518 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:34:56,518 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:34:59,519 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:35:02,522 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:35:05,527 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:35:08,532 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:35:11,535 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:35:14,538 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:35:17,541 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:35:20,542 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:35:23,544 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:35:26,549 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:35:29,553 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:35:32,558 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:35:35,559 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:35:38,564 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:35:41,569 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:35:44,570 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:35:47,574 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:35:50,579 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:35:53,583 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:35:56,587 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:35:59,589 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:36:02,592 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:36:05,594 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:36:08,599 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:36:11,605 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:36:14,610 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:36:15,357 - oss.py:44 - migrate_tool.services.oss - download: ParallelsDesktop-12.2.1-41615.dmg, Successfully, break
-2017-08-10 19:36:15,357 - worker.py:83 - migrate_tool.worker - download task: ParallelsDesktop-12.2.1-41615.dmg, size: 268279643, to local path: ./work/61532fd17dbf11e7b5383c15c2d12610, success
-2017-08-10 19:36:15,482 - cos_op.py:382 - qcloud_cos.cos_op - upload file serially
-2017-08-10 19:36:17,616 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:36:20,619 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:36:23,624 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:36:26,628 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:36:29,633 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:36:32,634 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:36:35,639 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:36:38,642 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:36:41,646 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:36:44,649 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:36:47,653 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:36:50,654 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:36:53,658 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:36:56,662 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:36:59,665 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:37:02,666 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:37:05,671 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:37:08,672 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:37:11,678 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:37:14,682 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:37:17,682 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:37:20,688 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:37:23,692 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:37:26,697 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:37:29,698 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:37:32,702 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:37:35,706 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:37:38,709 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:37:41,712 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:37:44,716 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:37:47,722 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:37:50,723 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:37:53,728 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:37:56,732 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:37:59,736 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:38:02,742 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:38:05,743 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:38:08,744 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:38:11,749 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:38:14,750 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:38:17,754 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:38:20,756 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:38:23,759 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:38:26,764 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:38:29,769 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:38:32,769 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:38:35,773 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:38:38,775 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:38:41,778 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:38:44,783 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:38:47,789 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:38:50,789 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:38:53,795 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:38:56,800 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:38:59,801 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:39:02,806 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:39:05,810 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:39:08,816 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:39:11,818 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:39:14,824 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:39:17,825 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:39:20,830 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:39:23,835 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:39:26,837 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:39:29,840 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:39:32,841 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:39:35,845 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:39:38,849 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:39:41,857 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:39:44,860 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:39:47,864 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:39:50,869 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:39:53,872 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:39:56,874 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:39:59,877 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:40:02,878 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:40:05,883 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:40:08,888 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:40:11,892 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:40:14,898 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:40:17,900 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:40:20,904 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:40:23,907 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:40:26,909 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:40:29,913 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:40:32,916 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:40:35,921 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:40:38,922 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:40:41,928 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:40:44,932 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:40:47,937 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:40:50,940 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:40:53,941 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:40:56,946 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:40:59,950 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:41:02,955 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:41:05,959 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:41:08,964 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:41:11,967 - migrator.py:79 - migrate_tool.migrator - working, 9 tasks successfully, 0 tasks failed.
-2017-08-10 19:41:13,090 - cosv4.py:98 - migrate_tool.services.cosv4 - upload task: ParallelsDesktop-12.2.1-41615.dmg, to cos success, break
-2017-08-10 19:41:13,090 - worker.py:93 - migrate_tool.worker - upload task: ParallelsDesktop-12.2.1-41615.dmg, size: 268279643, from local path: ./work/61532fd17dbf11e7b5383c15c2d12610, success
-2017-08-10 19:41:13,116 - worker.py:109 - migrate_tool.worker - remove task: ParallelsDesktop-12.2.1-41615.dmg, size: 268279643, file local path: ./work/61532fd17dbf11e7b5383c15c2d12610, success
-2017-08-10 19:41:13,116 - worker.py:112 - migrate_tool.worker - inc succ with ParallelsDesktop-12.2.1-41615.dmg
-2017-08-10 19:41:13,745 - migrator.py:182 - migrate_tool.migrator - stop flag is true, check thread will exit
-summary:
-  failed:  0  success:  10
+2017-08-11 10:31:39,619 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:31:39,637 - worker.py:35 - migrate_tool.worker - multiprocessing thread pool is staring
+2017-08-11 10:31:39,637 - worker.py:38 - migrate_tool.worker - multiprocessing thread pool staring done
+2017-08-11 10:31:39,924 - oss.py:56 - migrate_tool.services.oss - yield new object: OAS_Python_SDK_0.2.5.zip
+2017-08-11 10:31:39,924 - oss.py:62 - migrate_tool.services.oss - restore new object: OAS_Python_SDK_0.2.5.zip
+2017-08-11 10:31:39,968 - migrator.py:162 - migrate_tool.migrator - submit task: OAS_Python_SDK_0.2.5.zip, ret 200, already restore 
+2017-08-11 10:31:39,968 - migrator.py:168 - migrate_tool.migrator - add task: OAS_Python_SDK_0.2.5.zip, to restore check queue done
+2017-08-11 10:31:39,968 - oss.py:56 - migrate_tool.services.oss - yield new object: ParallelsDesktop-12.2.1-41615.dmg
+2017-08-11 10:31:39,968 - oss.py:62 - migrate_tool.services.oss - restore new object: ParallelsDesktop-12.2.1-41615.dmg
+2017-08-11 10:31:40,189 - migrator.py:162 - migrate_tool.migrator - submit task: ParallelsDesktop-12.2.1-41615.dmg, ret 200, already restore 
+2017-08-11 10:31:40,190 - migrator.py:168 - migrate_tool.migrator - add task: ParallelsDesktop-12.2.1-41615.dmg, to restore check queue done
+2017-08-11 10:31:40,190 - oss.py:56 - migrate_tool.services.oss - yield new object: QQ_V6.0.1.dmg
+2017-08-11 10:31:40,190 - oss.py:62 - migrate_tool.services.oss - restore new object: QQ_V6.0.1.dmg
+2017-08-11 10:31:40,414 - migrator.py:162 - migrate_tool.migrator - submit task: QQ_V6.0.1.dmg, ret 200, already restore 
+2017-08-11 10:31:40,414 - migrator.py:168 - migrate_tool.migrator - add task: QQ_V6.0.1.dmg, to restore check queue done
+2017-08-11 10:31:40,414 - oss.py:56 - migrate_tool.services.oss - yield new object: VSCode-darwin-stable.zip
+2017-08-11 10:31:40,414 - oss.py:62 - migrate_tool.services.oss - restore new object: VSCode-darwin-stable.zip
+2017-08-11 10:31:40,615 - migrator.py:162 - migrate_tool.migrator - submit task: VSCode-darwin-stable.zip, ret 200, already restore 
+2017-08-11 10:31:40,616 - migrator.py:168 - migrate_tool.migrator - add task: VSCode-darwin-stable.zip, to restore check queue done
+2017-08-11 10:31:40,616 - oss.py:56 - migrate_tool.services.oss - yield new object: Wireshark 2.2.7 Intel 64.dmg
+2017-08-11 10:31:40,616 - oss.py:62 - migrate_tool.services.oss - restore new object: Wireshark 2.2.7 Intel 64.dmg
+2017-08-11 10:31:40,642 - oss.py:62 - migrate_tool.services.oss - restore new object: OAS_Python_SDK_0.2.5.zip
+2017-08-11 10:31:40,938 - migrator.py:162 - migrate_tool.migrator - submit task: Wireshark 2.2.7 Intel 64.dmg, ret 200, already restore 
+2017-08-11 10:31:40,938 - migrator.py:168 - migrate_tool.migrator - add task: Wireshark 2.2.7 Intel 64.dmg, to restore check queue done
+2017-08-11 10:31:40,939 - oss.py:56 - migrate_tool.services.oss - yield new object: charles-proxy-4.1.3.dmg
+2017-08-11 10:31:40,939 - oss.py:62 - migrate_tool.services.oss - restore new object: charles-proxy-4.1.3.dmg
+2017-08-11 10:31:40,971 - migrator.py:218 - migrate_tool.migrator - check task: OAS_Python_SDK_0.2.5.zip, ret 200, restore finished, will put it to running task queue
+2017-08-11 10:31:40,973 - migrator.py:243 - migrate_tool.migrator - add task: OAS_Python_SDK_0.2.5.zip, to running task queue done
+2017-08-11 10:31:40,974 - oss.py:62 - migrate_tool.services.oss - restore new object: ParallelsDesktop-12.2.1-41615.dmg
+2017-08-11 10:31:41,144 - migrator.py:162 - migrate_tool.migrator - submit task: charles-proxy-4.1.3.dmg, ret 200, already restore 
+2017-08-11 10:31:41,145 - migrator.py:168 - migrate_tool.migrator - add task: charles-proxy-4.1.3.dmg, to restore check queue done
+2017-08-11 10:31:41,145 - oss.py:56 - migrate_tool.services.oss - yield new object: ossutilmac64
+2017-08-11 10:31:41,145 - oss.py:62 - migrate_tool.services.oss - restore new object: ossutilmac64
+2017-08-11 10:31:41,188 - migrator.py:218 - migrate_tool.migrator - check task: ParallelsDesktop-12.2.1-41615.dmg, ret 200, restore finished, will put it to running task queue
+2017-08-11 10:31:41,188 - migrator.py:243 - migrate_tool.migrator - add task: ParallelsDesktop-12.2.1-41615.dmg, to running task queue done
+2017-08-11 10:31:41,188 - oss.py:62 - migrate_tool.services.oss - restore new object: QQ_V6.0.1.dmg
+2017-08-11 10:31:41,436 - migrator.py:218 - migrate_tool.migrator - check task: QQ_V6.0.1.dmg, ret 200, restore finished, will put it to running task queue
+2017-08-11 10:31:41,436 - migrator.py:243 - migrate_tool.migrator - add task: QQ_V6.0.1.dmg, to running task queue done
+2017-08-11 10:31:41,437 - oss.py:62 - migrate_tool.services.oss - restore new object: VSCode-darwin-stable.zip
+2017-08-11 10:31:41,447 - migrator.py:162 - migrate_tool.migrator - submit task: ossutilmac64, ret 200, already restore 
+2017-08-11 10:31:41,447 - migrator.py:168 - migrate_tool.migrator - add task: ossutilmac64, to restore check queue done
+2017-08-11 10:31:41,447 - oss.py:56 - migrate_tool.services.oss - yield new object: protobuf-2.5.0.tar.gz
+2017-08-11 10:31:41,447 - oss.py:62 - migrate_tool.services.oss - restore new object: protobuf-2.5.0.tar.gz
+2017-08-11 10:31:41,643 - migrator.py:218 - migrate_tool.migrator - check task: VSCode-darwin-stable.zip, ret 200, restore finished, will put it to running task queue
+2017-08-11 10:31:41,643 - migrator.py:243 - migrate_tool.migrator - add task: VSCode-darwin-stable.zip, to running task queue done
+2017-08-11 10:31:41,643 - oss.py:62 - migrate_tool.services.oss - restore new object: Wireshark 2.2.7 Intel 64.dmg
+2017-08-11 10:31:41,741 - migrator.py:162 - migrate_tool.migrator - submit task: protobuf-2.5.0.tar.gz, ret 200, already restore 
+2017-08-11 10:31:41,742 - migrator.py:168 - migrate_tool.migrator - add task: protobuf-2.5.0.tar.gz, to restore check queue done
+2017-08-11 10:31:41,742 - oss.py:56 - migrate_tool.services.oss - yield new object: 【MNET2.0】【使用教程】MAC机使用MNET2.0【LINUX】.docx
+2017-08-11 10:31:41,742 - oss.py:62 - migrate_tool.services.oss - restore new object: 【MNET2.0】【使用教程】MAC机使用MNET2.0【LINUX】.docx
+2017-08-11 10:31:41,849 - migrator.py:218 - migrate_tool.migrator - check task: Wireshark 2.2.7 Intel 64.dmg, ret 200, restore finished, will put it to running task queue
+2017-08-11 10:31:41,849 - migrator.py:243 - migrate_tool.migrator - add task: Wireshark 2.2.7 Intel 64.dmg, to running task queue done
+2017-08-11 10:31:41,849 - oss.py:62 - migrate_tool.services.oss - restore new object: charles-proxy-4.1.3.dmg
+2017-08-11 10:31:42,043 - migrator.py:162 - migrate_tool.migrator - submit task: 【MNET2.0】【使用教程】MAC机使用MNET2.0【LINUX】.docx, ret 200, already restore 
+2017-08-11 10:31:42,043 - migrator.py:168 - migrate_tool.migrator - add task: 【MNET2.0】【使用教程】MAC机使用MNET2.0【LINUX】.docx, to restore check queue done
+2017-08-11 10:31:42,043 - oss.py:56 - migrate_tool.services.oss - yield new object: 陈海亮_硕士_5年经验_后台开发c++.pdf
+2017-08-11 10:31:42,043 - oss.py:62 - migrate_tool.services.oss - restore new object: 陈海亮_硕士_5年经验_后台开发c++.pdf
+2017-08-11 10:31:42,054 - migrator.py:218 - migrate_tool.migrator - check task: charles-proxy-4.1.3.dmg, ret 200, restore finished, will put it to running task queue
+2017-08-11 10:31:42,054 - migrator.py:243 - migrate_tool.migrator - add task: charles-proxy-4.1.3.dmg, to running task queue done
+2017-08-11 10:31:42,054 - oss.py:62 - migrate_tool.services.oss - restore new object: ossutilmac64
+2017-08-11 10:31:42,262 - migrator.py:162 - migrate_tool.migrator - submit task: 陈海亮_硕士_5年经验_后台开发c++.pdf, ret 200, already restore 
+2017-08-11 10:31:42,262 - migrator.py:168 - migrate_tool.migrator - add task: 陈海亮_硕士_5年经验_后台开发c++.pdf, to restore check queue done
+2017-08-11 10:31:42,262 - migrator.py:170 - migrate_tool.migrator - all task has been submitted, restore thread will exit
+2017-08-11 10:31:42,270 - migrator.py:218 - migrate_tool.migrator - check task: ossutilmac64, ret 200, restore finished, will put it to running task queue
+2017-08-11 10:31:42,271 - migrator.py:243 - migrate_tool.migrator - add task: ossutilmac64, to running task queue done
+2017-08-11 10:31:42,271 - oss.py:62 - migrate_tool.services.oss - restore new object: protobuf-2.5.0.tar.gz
+2017-08-11 10:31:42,601 - migrator.py:218 - migrate_tool.migrator - check task: protobuf-2.5.0.tar.gz, ret 200, restore finished, will put it to running task queue
+2017-08-11 10:31:42,602 - migrator.py:243 - migrate_tool.migrator - add task: protobuf-2.5.0.tar.gz, to running task queue done
+2017-08-11 10:31:42,602 - oss.py:62 - migrate_tool.services.oss - restore new object: 【MNET2.0】【使用教程】MAC机使用MNET2.0【LINUX】.docx
+2017-08-11 10:31:42,624 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:31:42,643 - worker.py:41 - migrate_tool.worker - worker queue join begin
+2017-08-11 10:31:42,799 - migrator.py:218 - migrate_tool.migrator - check task: 【MNET2.0】【使用教程】MAC机使用MNET2.0【LINUX】.docx, ret 200, restore finished, will put it to running task queue
+2017-08-11 10:31:42,799 - migrator.py:243 - migrate_tool.migrator - add task: 【MNET2.0】【使用教程】MAC机使用MNET2.0【LINUX】.docx, to running task queue done
+2017-08-11 10:31:42,800 - oss.py:62 - migrate_tool.services.oss - restore new object: 陈海亮_硕士_5年经验_后台开发c++.pdf
+2017-08-11 10:31:43,020 - migrator.py:218 - migrate_tool.migrator - check task: 陈海亮_硕士_5年经验_后台开发c++.pdf, ret 200, restore finished, will put it to running task queue
+2017-08-11 10:31:43,020 - migrator.py:243 - migrate_tool.migrator - add task: 陈海亮_硕士_5年经验_后台开发c++.pdf, to running task queue done
+2017-08-11 10:31:45,625 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:31:48,630 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:31:51,632 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:31:54,633 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:31:57,638 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:32:00,641 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:32:03,644 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:32:06,650 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:32:09,652 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:32:12,658 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:32:15,659 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:32:18,660 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:32:21,663 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:32:24,666 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:32:27,669 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:32:30,674 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:32:33,679 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:32:36,683 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:32:39,689 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:32:42,692 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:32:45,695 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:32:48,699 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:32:51,704 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:32:54,705 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:32:57,707 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:33:00,709 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:33:03,713 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:33:06,714 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:33:09,716 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:33:12,721 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:33:15,724 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:33:18,728 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:33:21,730 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:33:24,735 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:33:27,737 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:33:30,742 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:33:33,747 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:33:36,751 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:33:39,756 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:33:42,762 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:33:45,763 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:33:48,766 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:33:51,772 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:33:54,775 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:33:57,777 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:34:00,777 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:34:03,781 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:34:06,782 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:34:09,784 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:34:12,789 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:34:15,792 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:34:18,793 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:34:21,797 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:34:24,798 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:34:27,800 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:34:30,801 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:34:33,807 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:34:36,810 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:34:39,811 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:34:42,814 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:34:45,818 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:34:48,822 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:34:51,825 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:34:54,826 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:34:57,831 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:35:00,832 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:35:03,833 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:35:06,837 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:35:09,841 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:35:12,846 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:35:15,849 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:35:18,850 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:35:21,854 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:35:24,858 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:35:27,863 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:35:30,867 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:35:33,869 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:35:36,873 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:35:39,875 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:35:42,881 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:35:45,884 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:35:48,886 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:35:51,891 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:35:54,892 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:35:57,896 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:36:00,900 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:36:03,905 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:36:06,910 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:36:09,915 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:36:12,915 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:36:15,916 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:36:18,921 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:36:21,925 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:36:24,931 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:36:27,935 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:36:30,937 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:36:33,942 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:36:36,944 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:36:39,944 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:36:42,950 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:36:45,956 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:36:48,956 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:36:51,961 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:36:54,967 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:36:57,970 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:37:00,975 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:37:03,979 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:37:06,985 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:37:09,987 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:37:12,992 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:37:15,996 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:37:18,996 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:37:22,002 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:37:25,003 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:37:28,006 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:37:31,007 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:37:34,008 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:37:37,014 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:37:40,019 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:37:43,025 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:37:46,028 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:37:49,033 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:37:52,038 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:37:55,041 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:37:58,042 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:38:01,043 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:38:04,047 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:38:07,049 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:38:10,054 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:38:13,059 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:38:16,060 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:38:19,064 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:38:22,070 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:38:25,074 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:38:28,077 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:38:31,080 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:38:34,080 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:38:37,083 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:38:40,087 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:38:43,092 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:38:46,094 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:38:49,100 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:38:52,101 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:38:55,105 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:38:58,108 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:39:01,110 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:39:04,113 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:39:07,115 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:39:10,119 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:39:13,119 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:39:16,123 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:39:19,127 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:39:22,132 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:39:25,134 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:39:28,136 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:39:31,140 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:39:34,142 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:39:37,143 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:39:40,146 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:39:43,150 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:39:46,152 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:39:49,156 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:39:52,158 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:39:55,163 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:39:58,167 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:40:01,168 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:40:04,174 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:40:07,179 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:40:10,181 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:40:13,185 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:40:16,190 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:40:19,192 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:40:22,193 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:40:25,198 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:40:28,203 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:40:31,208 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:40:34,215 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:40:37,220 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:40:40,225 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:40:43,231 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:40:46,232 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:40:49,233 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:40:52,239 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:40:55,242 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:40:58,247 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:41:01,249 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:41:04,250 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:41:07,253 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:41:10,253 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:41:13,255 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:41:16,259 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:41:19,261 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:41:22,262 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:41:25,265 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:41:28,265 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:41:31,271 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:41:34,271 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:41:37,275 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:41:40,279 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:41:43,283 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:41:46,288 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:41:49,289 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:41:52,293 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:41:55,296 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:41:58,298 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:42:01,302 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:42:04,305 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:42:07,308 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:42:10,314 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:42:13,317 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:42:16,320 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:42:19,322 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:42:22,323 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:42:25,325 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:42:28,327 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:42:31,331 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:42:34,337 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:42:37,342 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:42:40,342 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:42:43,349 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:42:46,352 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:42:49,358 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:42:52,364 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:42:55,364 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:42:58,367 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:43:01,371 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:43:04,375 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:43:07,376 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:43:10,381 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:43:13,386 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:43:16,389 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:43:19,394 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:43:22,396 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:43:25,399 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:43:28,405 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:43:31,409 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:43:34,414 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:43:37,417 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:43:40,419 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:43:43,421 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:43:46,426 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:43:49,430 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:43:52,434 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:43:55,440 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:43:58,442 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:44:01,447 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:44:04,450 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:44:07,452 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:44:10,455 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:44:13,459 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:44:16,461 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:44:19,464 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:44:22,467 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:44:25,471 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:44:28,475 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:44:31,477 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:44:34,481 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:44:37,485 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:44:40,488 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:44:43,492 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:44:46,496 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:44:49,499 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:44:52,503 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:44:55,506 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:44:58,509 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:45:01,513 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:45:04,516 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:45:07,518 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:45:10,521 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:45:13,526 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:45:16,531 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:45:19,537 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:45:22,543 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:45:25,543 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:45:28,546 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:45:31,553 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:45:34,555 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:45:37,559 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:45:40,560 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:45:43,561 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:45:46,566 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:45:49,571 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:45:52,576 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:45:55,579 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:45:58,581 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:46:01,587 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:46:04,587 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:46:07,589 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:46:10,594 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:46:13,597 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:46:16,598 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:46:19,602 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:46:22,607 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:46:25,609 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:46:28,612 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:46:31,612 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:46:34,618 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:46:37,619 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:46:40,625 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:46:43,625 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:46:46,626 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:46:49,631 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:46:52,637 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:46:55,641 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:46:58,646 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:47:01,652 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:47:04,657 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:47:07,659 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:47:10,660 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:47:13,663 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:47:16,665 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:47:19,668 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:47:22,670 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:47:25,675 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:47:28,676 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:47:31,677 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:47:34,681 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:47:37,685 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:47:40,690 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:47:43,693 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:47:46,698 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:47:49,704 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:47:52,709 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:47:55,715 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:47:58,716 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:48:01,720 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:48:04,725 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:48:07,729 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:48:10,730 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:48:13,735 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:48:16,737 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:48:19,742 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:48:22,745 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:48:25,746 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:48:28,751 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:48:31,755 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:48:34,759 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:48:37,759 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:48:40,761 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:48:43,762 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:48:46,763 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:48:49,764 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:48:52,768 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:48:55,773 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:48:58,777 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:49:01,783 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:49:04,783 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:49:07,789 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:49:10,793 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:49:13,799 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:49:16,804 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:49:19,806 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:49:22,811 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:49:25,811 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:49:28,817 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:49:31,818 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:49:34,819 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:49:37,819 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:49:40,825 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:49:43,825 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:49:46,828 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:49:49,832 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:49:52,835 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:49:55,840 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:49:58,845 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:50:01,850 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:50:04,851 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:50:07,856 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:50:10,862 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:50:13,865 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:50:16,868 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:50:19,869 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:50:22,870 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:50:25,871 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:50:28,875 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:50:31,882 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:50:34,887 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:50:37,893 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:50:40,895 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:50:43,896 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:50:46,899 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:50:49,899 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:50:52,901 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:50:55,906 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:50:58,909 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:51:01,910 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:51:04,913 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:51:07,914 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:51:10,915 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:51:13,916 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:51:16,918 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:51:19,918 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:51:22,924 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:51:25,926 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:51:28,929 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:51:31,931 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:51:34,935 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:51:37,937 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:51:40,943 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:51:43,946 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:51:46,951 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:51:49,953 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:51:52,959 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:51:55,960 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:51:58,964 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:52:01,966 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:52:04,971 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:52:07,975 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:52:10,979 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:52:13,981 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:52:16,982 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:52:19,988 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:52:22,993 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:52:25,998 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:52:29,002 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:52:32,003 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:52:35,007 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:52:38,011 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:52:41,015 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:52:44,018 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:52:47,018 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:52:50,023 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:52:53,028 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:52:56,034 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:52:59,038 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:53:02,042 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:53:05,047 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:53:08,049 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:53:11,050 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:53:14,056 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:53:17,060 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:53:20,061 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:53:23,067 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:53:26,070 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:53:29,073 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:53:32,076 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:53:35,082 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:53:38,083 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:53:41,085 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:53:44,086 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:53:47,092 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:53:50,094 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:53:53,098 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:53:56,103 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:53:59,104 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:54:02,109 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:54:05,114 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:54:08,115 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:54:11,117 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:54:14,123 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:54:17,126 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:54:20,129 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:54:23,133 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:54:26,136 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:54:29,140 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:54:32,143 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:54:35,149 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:54:38,153 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:54:41,159 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:54:44,160 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:54:47,161 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:54:50,163 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:54:53,167 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:54:56,171 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:54:59,175 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:55:02,177 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:55:05,179 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:55:08,184 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:55:11,189 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:55:14,192 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:55:17,196 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:55:20,200 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:55:23,205 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:55:26,210 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:55:29,214 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:55:32,217 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:55:35,223 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:55:38,227 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:55:41,232 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:55:44,233 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:55:47,236 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:55:50,241 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:55:53,243 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:55:56,248 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:55:59,253 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:56:02,257 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:56:05,260 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:56:08,265 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:56:11,270 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:56:14,276 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:56:17,277 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:56:20,282 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:56:23,283 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:56:26,288 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:56:29,293 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:56:32,298 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:56:35,299 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:56:38,303 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:56:41,308 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:56:44,310 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:56:47,316 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:56:50,319 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:56:53,321 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:56:56,327 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:56:59,333 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:57:02,337 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:57:05,342 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:57:08,343 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:57:11,347 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:57:14,352 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:57:17,354 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:57:20,358 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:57:23,361 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:57:26,367 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:57:29,370 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:57:32,374 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:57:35,376 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:57:38,377 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:57:41,378 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:57:44,384 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:57:47,390 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:57:50,393 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:57:53,399 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:57:56,404 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:57:59,406 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:58:02,409 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:58:05,410 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:58:08,416 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:58:11,421 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:58:14,426 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:58:17,427 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:58:20,432 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:58:23,435 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:58:26,441 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:58:29,443 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:58:32,447 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:58:35,448 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:58:38,452 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:58:41,453 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:58:44,458 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:58:47,463 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:58:50,464 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:58:53,469 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:58:56,472 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:58:59,473 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:59:02,477 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:59:05,482 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:59:08,483 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:59:11,489 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:59:14,493 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:59:17,494 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:59:20,499 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:59:23,505 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:59:26,510 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:59:29,516 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:59:32,522 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:59:35,527 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:59:38,532 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:59:41,534 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:59:44,535 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:59:47,541 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:59:50,543 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:59:53,544 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:59:56,549 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 10:59:59,555 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:00:02,560 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:00:05,563 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:00:08,568 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:00:11,574 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:00:14,577 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:00:17,577 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:00:20,583 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:00:23,588 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:00:26,593 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:00:29,594 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:00:32,594 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:00:35,599 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:00:38,605 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:00:41,606 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:00:44,610 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:00:47,614 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:00:50,618 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:00:53,622 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:00:56,627 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:00:59,630 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:01:02,631 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:01:05,636 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:01:08,637 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:01:11,643 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:01:14,644 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:01:17,649 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:01:20,649 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:01:23,655 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:01:26,659 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:01:29,661 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:01:32,666 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:01:35,670 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:01:38,674 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:01:41,678 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:01:44,684 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:01:47,690 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:01:50,694 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:01:53,700 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:01:56,704 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:01:59,708 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:02:02,710 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:02:05,716 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:02:08,718 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:02:11,718 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:02:14,720 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:02:17,722 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:02:20,727 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:02:23,732 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:02:26,737 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:02:29,742 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:02:32,743 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:02:35,744 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:02:38,749 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:02:41,755 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:02:44,761 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:02:47,761 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:02:50,762 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:02:53,766 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:02:56,772 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:02:59,777 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:03:02,782 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:03:05,788 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:03:08,794 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:03:11,797 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:03:14,801 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:03:17,805 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:03:20,810 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:03:23,816 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:03:26,820 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:03:29,825 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:03:32,827 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:03:35,831 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:03:38,831 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:03:41,833 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:03:44,838 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:03:47,840 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:03:50,844 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:03:53,849 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:03:56,853 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:03:59,859 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:04:02,861 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:04:05,862 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:04:08,866 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:04:11,870 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:04:14,871 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:04:17,877 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:04:20,879 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:04:23,880 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:04:26,885 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:04:29,888 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:04:32,892 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:04:35,894 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:04:38,899 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:04:41,905 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:04:44,911 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:04:47,916 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:04:50,922 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:04:53,924 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:04:56,927 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:04:59,933 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:05:02,938 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:05:05,943 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:05:08,949 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:05:11,950 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:05:14,956 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:05:17,960 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:05:20,961 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:05:23,965 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:05:26,970 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:05:29,975 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:05:32,977 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:05:35,983 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:05:38,987 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:05:41,988 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:05:44,989 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:05:47,994 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:05:50,995 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:05:54,000 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:05:57,006 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:06:00,010 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:06:03,011 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:06:06,016 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:06:09,022 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:06:12,027 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:06:15,032 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:06:18,033 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:06:21,038 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:06:24,040 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:06:27,044 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:06:30,046 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:06:33,047 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:06:36,052 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:06:39,058 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:06:42,061 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:06:45,066 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:06:48,072 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:06:51,078 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:06:54,083 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:06:57,088 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:07:00,091 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:07:03,094 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:07:06,098 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:07:09,100 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:07:12,100 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:07:15,101 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:07:18,101 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:07:21,102 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:07:24,104 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:07:27,109 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:07:30,111 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:07:33,117 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:07:36,118 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:07:39,118 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:07:42,124 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:07:45,127 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:07:48,133 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:07:51,136 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:07:54,141 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:07:57,144 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:08:00,150 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:08:03,150 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:08:06,152 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:08:09,152 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:08:12,158 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:08:15,161 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:08:18,162 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:08:21,168 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:08:24,173 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:08:27,179 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:08:30,182 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:08:33,188 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:08:36,193 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:08:39,197 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:08:42,202 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:08:45,203 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:08:48,205 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:08:51,207 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:08:54,211 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:08:57,217 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:09:00,218 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:09:03,221 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:09:06,226 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:09:09,230 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:09:12,233 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:09:15,234 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:09:18,239 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:09:21,244 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:09:24,244 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:09:27,246 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:09:30,247 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:09:33,248 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:09:36,249 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:09:39,252 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:09:42,256 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:09:45,260 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:09:48,267 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:09:51,267 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:09:54,268 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:09:57,272 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:10:00,278 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:10:03,283 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:10:06,289 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:10:09,295 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:10:12,299 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:10:15,301 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:10:18,305 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:10:21,309 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:10:24,311 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:10:27,317 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:10:30,322 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:10:33,327 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:10:36,328 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:10:39,329 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:10:42,335 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:10:45,336 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:10:48,341 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:10:51,343 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:10:54,344 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:10:57,345 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:11:00,345 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:11:03,348 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:11:06,353 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:11:09,358 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:11:12,359 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:11:15,361 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:11:18,366 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:11:21,371 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:11:24,375 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:11:27,378 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:11:30,378 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:11:33,381 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:11:36,383 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:11:39,386 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:11:42,388 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:11:45,393 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:11:48,396 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:11:51,401 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:11:54,403 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:11:57,409 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:12:00,411 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:12:03,412 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.
+2017-08-11 11:12:06,418 - migrator.py:79 - migrate_tool.migrator - working, 0 tasks successfully, 0 tasks failed.

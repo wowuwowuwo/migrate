@@ -8,7 +8,14 @@ from argparse import ArgumentParser
 import os
 from os import path
 
+from Queue import Empty, Full
+import multiprocessing
+import os
+import time
+import uuid
+
 from migrate_tool.migrator import ThreadMigrator
+from migrate_tool.worker import work_thread
 
 import signal
 from logging.config import dictConfig
@@ -17,12 +24,13 @@ import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
 
+
 log_config = {
     'version': 1,
     'disable_existing_loggers': False,
     'formatters': {
         'standard': {
-            'format': '%(asctime)s - %(filename)s:%(lineno)s - %(name)s - %(message)s'
+            'format': '%(asctime)s - %(filename)s:%(lineno)s - %(process)d - %(name)s - %(message)s'
         },
         'error': {
             'format': '%(asctime)s\t%(message)s'
@@ -78,7 +86,6 @@ def create_parser():
 
 
 def main_thread():
-
     parser = create_parser()
     opt = parser.parse_args()
     conf = SafeConfigParser()
@@ -102,31 +109,70 @@ def main_thread():
     loads_services()
     output_service = services_[output_service_conf['type']](**output_service_conf)
     input_service = services_[input_service_conf['type']](**input_service_conf)
+    work_dir = conf.get('common', 'workspace')
 
+    # init share queue and lock, queue is for running task, lock is for leveldb filter
+    share_queue = multiprocessing.Queue()
+    lock = multiprocessing.Lock()
+
+    # init restore process
+    restore_process = multiprocessing.Process(target=restore_check_thread,
+                                              args=(share_queue, lock, work_dir, output_service, input_service))
+    restore_process.start()
+
+    # init work process pool
+    threads_pool = []
+    limit = max([_threads, multiprocessing.cpu_count()])
+    for i in range(limit):
+        p = multiprocessing.Process(target=work_thread,
+                                    args=(share_queue, lock, work_dir, output_service, input_service))
+        threads_pool.append(p)
+    start_pool(threads_pool)
+
+    # todo, add signal
+
+    # todo, stop restore process
+    restore_process.join()
+
+    # todo, stop worker process
+    stop_pool(threads_pool)
+    pass
+
+
+def restore_check_thread(share_queue, lock, work_dir, output_service, input_service):
     migrator = ThreadMigrator(input_service=input_service,
                               output_service=output_service,
-                              work_dir=conf.get('common', 'workspace'),
-                              threads=_threads)
+                              work_dir=work_dir,
+                              threads=10,
+                              share_q=share_queue)
     migrator.start()
+    while True:
+        if migrator.is_finish_normal():
+            logger.info("restore_check_process, is finish normal, will exit")
+            break
+        logger.info("restore_check_process is working, sleep 3 seconds")
+        time.sleep(3)
+    pass
 
-    import time
-    try:
-        while True:
-            state = migrator.status()
+logger = getLogger(__name__)
+fail_logger = getLogger('migrate_tool.fail_file')
+pool_stop = False
 
-            if state['finish']:
-                break
-            time.sleep(3)
 
-    except KeyboardInterrupt:
-        state = migrator.status()
-        print state
-        import sys
-        sys.exit()
+def start_pool(threads_pool):
+    logger.info("multiprocessing thread pool is staring")
+    for p in threads_pool:
+        p.start()
+    logger.info("multiprocessing thread pool staring done")
 
-    migrator.stop()
-    state = migrator.status()
-    print 'summary:\n ', 'failed: ', state['fail'], ' success: ', state['success']
+
+def stop_pool(threads_pool):
+    logger.info("multiprocessing thread pool join begin")
+    global pool_stop
+    pool_stop = True
+    for p in threads_pool:
+        p.join()
+    logger.info("multiprocessing thread pool join done")
 
 
 def main_():
@@ -135,7 +181,7 @@ def main_():
     thread_.start()
     try:
         while thread_.is_alive():
-            thread_.join(2)
+            thread_.join(3)
     except KeyboardInterrupt:
         print 'exiting'
 
