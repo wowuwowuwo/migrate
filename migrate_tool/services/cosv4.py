@@ -87,6 +87,7 @@ class CosV4StorageService(storage_service.StorageService):
             local_path.encode('utf-8')
         insert_only = 0 if self._overwrite else 1
         for i in range(10):
+            logger.info("upload file: %s, with retry %d, need size: %d", task.key, i, task.size)
             try:
                 upload_request = UploadFileRequest(self._bucket, unicode(cos_path), local_path, insert_only=insert_only)
                 upload_file_ret = self._cos_api.upload_file(upload_request)

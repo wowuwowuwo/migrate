@@ -15,7 +15,7 @@ import signal
 import time
 import uuid
 
-from migrate_tool.migrator import ThreadMigrator
+from migrate_tool.migrator import restore_check_thread
 from migrate_tool.worker import work_thread
 
 import signal
@@ -87,6 +87,49 @@ def create_parser():
 
 
 def main_thread():
+    pass
+
+
+logger = getLogger(__name__)
+fail_logger = getLogger('migrate_tool.fail_file')
+
+
+def start_pool(threads_pool):
+    logger.info("multiprocessing thread pool is staring")
+    for p in threads_pool:
+        p.start()
+    logger.info("multiprocessing thread pool staring done")
+
+
+def signal_pool(threads_pool):
+    logger.info("multiprocessing thread pool signal begin")
+    for p in threads_pool:
+        os.kill(p.pid, signal.SIGUSR1)
+    logger.info("multiprocessing thread pool signal done")
+
+
+def wait_pool(threads_pool):
+    logger.info("multiprocessing thread pool join begin")
+    for p in threads_pool:
+        p.join()
+    logger.info("multiprocessing thread pool join done")
+
+
+stop = False
+
+
+def handler_stop(sig, frame):
+    logger.info("main got signal: %d, means need stop", sig)
+    global stop
+    stop = True
+
+
+def main_():
+    # todo, add signal first
+    signal.signal(signal.SIGINT, handler_stop)
+    signal.signal(signal.SIGTERM, handler_stop)
+    signal.signal(signal.SIGHUP, handler_stop)
+
     parser = create_parser()
     opt = parser.parse_args()
     conf = SafeConfigParser()
@@ -117,84 +160,47 @@ def main_thread():
     lock = multiprocessing.Lock()
 
     # init restore process
-    restore_process = multiprocessing.Process(target=restore_check_thread,
+    restore_process = multiprocessing.Process(target=restore_check_thread, name="restore_check_worker",
                                               args=(share_queue, lock, work_dir, output_service, input_service))
+    restore_process.daemon = True
     restore_process.start()
 
     # init work process pool
     threads_pool = []
     limit = max([_threads, multiprocessing.cpu_count()])
     for i in range(limit):
-        p = multiprocessing.Process(target=work_thread,
+        p = multiprocessing.Process(target=work_thread, name = "running_task_worker",
                                     args=(share_queue, lock, work_dir, output_service, input_service))
+        p.daemon = True
         threads_pool.append(p)
     start_pool(threads_pool)
 
-    # todo, wait restore process
-    restore_process.join()
-
-    # todo, signal work pool that restore process is finish
-    signal_pool(threads_pool)
-
-    # todo, wait worker process
-    wait_pool(threads_pool)
-    pass
-
-
-def restore_check_thread(share_queue, lock, work_dir, output_service, input_service):
-    migrator = ThreadMigrator(input_service=input_service,
-                              output_service=output_service,
-                              work_dir=work_dir,
-                              threads=10,
-                              share_q=share_queue)
-    migrator.start()
     while True:
-        if migrator.is_final_finish():
-            logger.info("restore_check_process, is final finish, will exit")
+        global stop
+        if stop:
+            logger.info("main process stop is true, will exit")
             break
-        logger.info("restore_check_process is working, sleep 3 seconds")
-        time.sleep(3)
+        # check child process
+        if restore_process.is_alive():
+            logger.info("main process, sleep 3 seconds")
+            time.sleep(3)
+        else:
+            logger.info("restore_check_process is not alive, maybe normally exit, "
+                        "so main process will normally exit too")
+            time.sleep(6)
+            restore_process.join()
+            signal_pool(threads_pool)
+            wait_pool(threads_pool)
+            logger.info("main process: %d, is exit normally", os.getpid())
+            sys.exit(0)
+        pass
+    # todo, term signal quit, sleep a few more seconds
     time.sleep(6)
-    migrator.stop()
-    logger.info("restore_check_process is stopped")
+    restore_process.join()
+    wait_pool(threads_pool)
+
+    logger.info("main process: %d, is exit signal", os.getpid())
     pass
-
-logger = getLogger(__name__)
-fail_logger = getLogger('migrate_tool.fail_file')
-
-
-def start_pool(threads_pool):
-    logger.info("multiprocessing thread pool is staring")
-    for p in threads_pool:
-        p.start()
-    logger.info("multiprocessing thread pool staring done")
-
-
-def signal_pool(threads_pool):
-    logger.info("multiprocessing thread pool signal begin")
-    for p in threads_pool:
-        os.kill(p.pid, signal.SIGUSR1)
-    logger.info("multiprocessing thread pool signal done")
-
-
-def wait_pool(threads_pool):
-    logger.info("multiprocessing thread pool join begin")
-    for p in threads_pool:
-        p.join()
-    logger.info("multiprocessing thread pool join done")
-
-
-def main_():
-    # todo, add signal first
-
-    thread_ = Thread(target=main_thread)
-    thread_.daemon = True
-    thread_.start()
-    try:
-        while thread_.is_alive():
-            thread_.join(3)
-    except KeyboardInterrupt:
-        print 'exiting'
 
 
 if __name__ == '__main__':

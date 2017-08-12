@@ -18,9 +18,15 @@ restore_process_finish = False
 
 
 def handler_user1(sig, frame):
-    logger.info("got signal: %s, means restore process is finish", sig)
+    logger.info("got signal: %d, means restore process is finish", sig)
     global restore_process_finish
     restore_process_finish = True
+
+
+def handler_stop(sig, frame):
+    logger.info("got signal: %d, means need stop", sig)
+    global pool_stop
+    pool_stop = True
 
 
 def work_thread(share_queue, lock, work_dir, output_service, input_service):
@@ -30,11 +36,25 @@ def work_thread(share_queue, lock, work_dir, output_service, input_service):
     # todo, signal
     signal.signal(signal.SIGUSR1, handler_user1)
 
+    # signal.signal(signal.SIGINT, handler_stop)
+    # signal.signal(signal.SIGTERM, handler_stop)
+    # signal.signal(signal.SIGHUP, handler_stop)
+    signal.signal(signal.SIGINT, signal.SIG_DFL)
+    signal.signal(signal.SIGTERM, signal.SIG_DFL)
+    signal.signal(signal.SIGHUP, signal.SIG_DFL)
+
     while True:
         global pool_stop
         if pool_stop:
             logger.info("pool_stop is true, work process: %d, will exit", os.getpid())
             break
+
+        # check restore process is finish or not
+        global restore_process_finish
+        if restore_process_finish and share_queue.empty():
+            logger.info("restore process is finish, and share task queue is empty, pool worker me will exit")
+            break
+
         try:
             logger.info("get one task from running task queue begin")
             task = share_queue.get_nowait()
@@ -43,7 +63,7 @@ def work_thread(share_queue, lock, work_dir, output_service, input_service):
             time.sleep(3)
             continue
 
-        logger.info("finally get one task from running task queue end, task: %s", task.key)
+        logger.info("finally get one task from running task queue done, task: %s", task.key)
 
         task_path = task.key
         if task_path.startswith('/'):
@@ -63,13 +83,12 @@ def work_thread(share_queue, lock, work_dir, output_service, input_service):
             try:
                 ret = input_service.exists(task)
                 if ret:
-                    logger.info("finally check task: %s, exists, skip it", file_path=task_path.encode('utf-8'))
+                    logger.info("finally check task: %s, exists, skip it", task_path.encode('utf-8'))
                     # with lock:
                     #     _filter.add(task_path)
                     continue
                 else:
-                    logger.info("finally check task: %s, not exists, will download it",
-                                file_path=task_path.encode('utf-8'))
+                    logger.info("finally check task: %s, not exists, will download it", task_path.encode('utf-8'))
             except Exception as e:
                 # todo, override ?
                 logger.exception("finally check task: %s, exists failed, error: %s", task_path.encode('utf-8'), str(e))
@@ -78,8 +97,7 @@ def work_thread(share_queue, lock, work_dir, output_service, input_service):
             try:
                 output_service.download(task, localpath)
             except Exception as e:
-                logger.exception("finally download task: %s, failed, error: %s",
-                                 task_path.encode('utf-8'), str(e))
+                logger.exception("finally download task: %s, failed, error: %s", task_path.encode('utf-8'), str(e))
                 fail_logger.error(task_path)
                 # with lock:
                 #     fail += 1
@@ -91,8 +109,7 @@ def work_thread(share_queue, lock, work_dir, output_service, input_service):
             try:
                 input_service.upload(task, localpath)
             except Exception:
-                logger.exception("finally upload task: %s, failed, error: %s",
-                                 task_path.encode('utf-8'), str(e))
+                logger.exception("finally upload task: %s, failed, error: %s", task_path.encode('utf-8'), str(e))
                 # with lock:
                 #     fail += 1
                 fail_logger.error(task_path)
@@ -135,11 +152,7 @@ def work_thread(share_queue, lock, work_dir, output_service, input_service):
                 os.removedirs(path.dirname(localpath))
             except OSError:
                 pass
-        # step 5, check restore process is finish
-        global restore_process_finish
-        if restore_process_finish and share_queue.empty():
-            logger.info("restore process is finish, and share task queue is empty, pool worker me will exit")
-            break
+        pass
     logger.info("multiprocessing pool worker: %d, will exit", os.getpid())
     pass
 

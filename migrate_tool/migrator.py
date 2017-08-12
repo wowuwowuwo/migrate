@@ -10,6 +10,7 @@ import time
 from threading import Timer, Thread
 
 from Queue import Queue, Empty
+import signal
 
 from migrate_tool.filter import Filter
 
@@ -147,6 +148,12 @@ class ThreadMigrator(BaseMigrator):
                     logger.info("stop flag is true, check thread will exit")
                     break
 
+                if self._restore_finish and self._restore_check_queue.empty():
+                    logger.info("restore thread is finish and check queue is empty, "
+                                "so check thread will exit too")
+                    self._check_finish = True
+                    break
+
                 try:
                     # logger.debug("try to get task")
                     task = self._restore_check_queue.get_nowait()
@@ -208,11 +215,6 @@ class ThreadMigrator(BaseMigrator):
                         logger.info("finally add task: %s, to running task queue done, running task queue size: %d",
                                     task.key, self._task_queue.qsize())
                         break
-                if self._restore_finish and self._restore_check_queue.empty():
-                    logger.info("restore thread is finish and check queue is empty, "
-                                "so check thread will exit too")
-                    self._check_finish = True
-                    break
                 pass
         except Exception as e:
             self._check_finish = True
@@ -241,6 +243,48 @@ class ThreadMigrator(BaseMigrator):
         self._stop = True
         for t in self._threads:
             t.join()
+
+
+stop = False
+
+
+def handler_stop(sig, frame):
+    logger.info("got signal: %d, means need stop", sig)
+    global stop
+    stop = True
+
+
+def restore_check_thread(share_queue, lock, work_dir, output_service, input_service):
+    # todo, signal
+    # signal.signal(signal.SIGINT, handler_stop)
+    # signal.signal(signal.SIGTERM, handler_stop)
+    # signal.signal(signal.SIGHUP, handler_stop)
+
+    signal.signal(signal.SIGINT, signal.SIG_DFL)
+    signal.signal(signal.SIGTERM, signal.SIG_DFL)
+    signal.signal(signal.SIGHUP, signal.SIG_DFL)
+
+    migrator = ThreadMigrator(input_service=input_service,
+                              output_service=output_service,
+                              work_dir=work_dir,
+                              threads=10,
+                              share_q=share_queue)
+    migrator.start()
+    while True:
+        global stop
+        if stop:
+            logger.info("restore_check_process global stop flag is true, will exit")
+            break
+        if migrator.is_final_finish():
+            logger.info("restore_check_process, is final finish, will exit")
+            break
+        logger.info("restore_check_process is working, sleep 3 seconds")
+        time.sleep(3)
+    # wait for a few seconds
+    time.sleep(6)
+    migrator.stop()
+    logger.info("restore_check_process: %d, is exit", os.getpid())
+    pass
 
 if __name__ == '__main__':
     from migrate_tool.services.LocalFileSystem import LocalFileSystem
