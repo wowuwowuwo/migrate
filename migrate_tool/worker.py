@@ -6,6 +6,7 @@ from Queue import Empty, Full
 import multiprocessing
 import os
 import uuid
+import signal
 
 from migrate_tool.filter import Filter
 
@@ -13,11 +14,21 @@ from migrate_tool.filter import Filter
 logger = getLogger(__name__)
 fail_logger = getLogger('migrate_tool.fail_file')
 pool_stop = False
+restore_process_finish = False
+
+
+def handler_user1(sig, frame):
+    logger.info("got signal: %s, means restore process is finish", sig)
+    global restore_process_finish
+    restore_process_finish = True
 
 
 def work_thread(share_queue, lock, work_dir, output_service, input_service):
     logger.info("multiprocessing pool worker is starting")
     # _filter = Filter(work_dir)
+
+    # todo, signal
+    signal.signal(signal.SIGUSR1, handler_user1)
 
     while True:
         global pool_stop
@@ -32,7 +43,7 @@ def work_thread(share_queue, lock, work_dir, output_service, input_service):
             time.sleep(3)
             continue
 
-        logger.info("get one task from running task queue end, task: %s", task.key)
+        logger.info("finally get one task from running task queue end, task: %s", task.key)
 
         task_path = task.key
         if task_path.startswith('/'):
@@ -46,43 +57,50 @@ def work_thread(share_queue, lock, work_dir, output_service, input_service):
                 os.makedirs(path.dirname(localpath))
             except OSError as e:
                 # directory is exists
-                logger.warn("local path: %s, exists, possible work dir ! error: %s", localpath, str(e))
+                logger.warn("local path: %s, exists, possible work dir ! warn: %s", localpath, str(e))
 
+            # step 1, check exists
             try:
                 ret = input_service.exists(task)
                 if ret:
-                    logger.info("{file_path} exists, skip it".format(file_path=task_path.encode('utf-8')))
+                    logger.info("finally check task: %s, exists, skip it", file_path=task_path.encode('utf-8'))
                     # with lock:
                     #     _filter.add(task_path)
                     continue
+                else:
+                    logger.info("finally check task: %s, not exists, will download it",
+                                file_path=task_path.encode('utf-8'))
             except Exception as e:
                 # todo, override ?
-                logger.exception("check task: %s, exists failed, error: %s", task_path.encode('utf-8'), str(e))
+                logger.exception("finally check task: %s, exists failed, error: %s", task_path.encode('utf-8'), str(e))
 
+            # step 2, download file
             try:
                 output_service.download(task, localpath)
             except Exception as e:
-                logger.exception("error: finally download task: %s failed, error: %s",
+                logger.exception("finally download task: %s, failed, error: %s",
                                  task_path.encode('utf-8'), str(e))
                 fail_logger.error(task_path)
                 # with lock:
                 #     fail += 1
                 continue
-            logger.info("download task: %s, size: %d, to local path: %s, success", task.key, task.size,
+            logger.info("finally download task: %s, success, size: %d, to local path: %s", task.key, task.size,
                         localpath)
 
+            # step 3, upload file
             try:
                 input_service.upload(task, localpath)
             except Exception:
-                logger.exception("error: finally upload task: %s failed, error: %s",
+                logger.exception("finally upload task: %s, failed, error: %s",
                                  task_path.encode('utf-8'), str(e))
                 # with lock:
                 #     fail += 1
                 fail_logger.error(task_path)
                 continue
-            logger.info("upload task: %s, size: %d, from local path: %s, success", task.key, task.size,
+            logger.info("finally upload task: %s, success, size: %d, from local path: %s", task.key, task.size,
                         localpath)
 
+            # step 4, remove tmp file
             try:
                 if isinstance(localpath, unicode):
                     localpath = localpath.encode('utf-8')
@@ -92,24 +110,23 @@ def work_thread(share_queue, lock, work_dir, output_service, input_service):
                 except OSError:
                     pass
             except Exception as e:
-                logger.exception(str(e))
+                logger.exception("finally remove task tmp file: %s, failed, size: %d, local path: %s, error: %s",
+                                 task.key, task.size, localpath, str(e))
                 continue
-            logger.info("remove task: %s, size: %d, file local path: %s, success", task.key, task.size,
+            logger.info("finally remove task tmp file: %s, success, size: %d, local path: %s", task.key, task.size,
                         localpath)
-
             # todo, check task etag between source and destination
-            if isinstance(task_path, unicode):
-                logger.info("inc succ with {}".format(task_path.encode('utf-8')))
-            else:
-                logger.info("inc succ with {}".format(task_path.encode('utf-8')))
+            # if isinstance(task_path, unicode):
+            #     logger.info("inc succ with {}".format(task_path.encode('utf-8')))
+            # else:
+            #     logger.info("inc succ with {}".format(task_path.encode('utf-8')))
 
             # with lock:
             #     add task to filter
             #     succ += 1
             #     _filter.add(task_path)
-        except Exception:
-            logger.exception("try except for deleting file")
-
+        except Exception as e:
+            logger.exception("try except for deleting file, error: %s", str(e))
         finally:
             if isinstance(localpath, unicode):
                 localpath = localpath.encode('utf-8')
@@ -118,6 +135,12 @@ def work_thread(share_queue, lock, work_dir, output_service, input_service):
                 os.removedirs(path.dirname(localpath))
             except OSError:
                 pass
+        # step 5, check restore process is finish
+        global restore_process_finish
+        if restore_process_finish and share_queue.empty():
+            logger.info("restore process is finish, and share task queue is empty, pool worker me will exit")
+            break
     logger.info("multiprocessing pool worker: %d, will exit", os.getpid())
+    pass
 
 

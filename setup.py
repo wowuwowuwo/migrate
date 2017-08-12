@@ -20,7 +20,7 @@ def long_description():
 
 setup(
     name='cos_migrate_tool_for_restore',
-    version='0.3.12',
+    version='0.3.13',
     packages=['migrate_tool', 'migrate_tool.services'],
     url='https://www.qcloud.com/',
     license='MIT',

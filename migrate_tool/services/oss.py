@@ -31,7 +31,7 @@ class OssStorageService(storage_service.StorageService):
                 # todo, remove localpath first
                 os.remove(local_path)
             except Exception as e:
-                logger.error("before download, remove local path: %s, normal failed, error: %s", local_path, str(e))
+                logger.error("before download, remove local path: %s, this is normal, warn: %s", local_path, str(e))
                 pass
 
             self._oss_api.get_object_to_file(task.key, local_path)

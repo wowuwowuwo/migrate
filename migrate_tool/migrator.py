@@ -51,7 +51,8 @@ class ThreadMigrator(BaseMigrator):
         self._filter = Filter(self._work_dir)
 
         self._stop = False
-        self._finish = False
+        self._restore_finish = False
+        self._check_finish = False
         self._threads = []
 
         self._sleep_seconds = 6
@@ -77,6 +78,7 @@ class ThreadMigrator(BaseMigrator):
                 # step 0, flow control for restore check queue
                 while True:
                     if self._stop:
+                        logger.info("stop flag is true, restore thread will exit")
                         break
                     if self._restore_check_queue.qsize() > self._max_restore_check_queue_size:
                         logger.info("restore check queue len: %d, larger than max size: %d, sleep 3 second...",
@@ -127,14 +129,14 @@ class ThreadMigrator(BaseMigrator):
                         continue
                 # step 3, add to restore check queue
                 self._restore_check_queue.put(task)
-                logger.info("add task: %s, to restore check queue done, queue size: %d",
+                logger.info("finally add task: %s, to restore check queue done, queue size: %d",
                             object_name_, self._restore_check_queue.qsize())
             else:
                 logger.info("all task has been submitted or stop flag is true, restore thread will exit")
-                self._finish = True
+                self._restore_finish = True
         except Exception as e:
-            self._finish = True
-            logger.exception(str(e))
+            self._restore_finish = True
+            logger.exception("restore thread error: %s", str(e))
         pass
 
     def check_thread(self):
@@ -143,10 +145,6 @@ class ThreadMigrator(BaseMigrator):
             while True:
                 if self._stop:
                     logger.info("stop flag is true, check thread will exit")
-                    break
-                if self.is_finish_normal():
-                    logger.info("finish normal: restore thread is finish and check queue is empty, "
-                                "so check thread will exit too")
                     break
 
                 try:
@@ -163,7 +161,7 @@ class ThreadMigrator(BaseMigrator):
                 if isinstance(object_name_, unicode):
                     object_name_ = object_name_.encode('utf-8')
 
-                logger.info("get task: %s, from restore check queue done, queue size: %d",
+                logger.info("finally get task: %s, from restore check queue done, queue size: %d",
                             object_name_, self._restore_check_queue.qsize())
 
                 # step 1, check restore success or not
@@ -197,6 +195,9 @@ class ThreadMigrator(BaseMigrator):
                 # step 3, add task to real task queue
                 # flow control for running task queue
                 while True:
+                    if self._stop:
+                        logger.info("stop flag is true, check thread will exit")
+                        break
                     if self._task_queue.qsize() > self._max_task_queue_size:
                         logger.info("running task queue len: %d, larger than max size: %d, sleep 3 second...",
                                     self._task_queue.qsize(), self._max_task_queue_size)
@@ -204,14 +205,18 @@ class ThreadMigrator(BaseMigrator):
                         continue
                     else:
                         self._task_queue.put(task)
-                        logger.info("add task: %s, to running task queue done, running task queue size: %d",
+                        logger.info("finally add task: %s, to running task queue done, running task queue size: %d",
                                     task.key, self._task_queue.qsize())
                         break
-                    # self._worker.add_task(task)
-                    # logger.info("add task: %s, to running task queue done", task.key)
+                if self._restore_finish and self._restore_check_queue.empty():
+                    logger.info("restore thread is finish and check queue is empty, "
+                                "so check thread will exit too")
+                    self._check_finish = True
+                    break
                 pass
         except Exception as e:
-            logger.exception(str(e))
+            self._check_finish = True
+            logger.exception("check thread error: %s", str(e))
         pass
 
     def start(self):
@@ -228,10 +233,9 @@ class ThreadMigrator(BaseMigrator):
         for t in self._threads:
             t.start()
 
-    def is_finish_normal(self):
-        if self._finish and self._restore_check_queue.empty():
-            return True
-        return False
+    def is_final_finish(self):
+        # check thread finish means final finish
+        return self._check_finish
 
     def stop(self, force=False):
         self._stop = True

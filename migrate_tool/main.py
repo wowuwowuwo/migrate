@@ -11,6 +11,7 @@ from os import path
 from Queue import Empty, Full
 import multiprocessing
 import os
+import signal
 import time
 import uuid
 
@@ -129,13 +130,14 @@ def main_thread():
         threads_pool.append(p)
     start_pool(threads_pool)
 
-    # todo, add signal
-
-    # todo, stop restore process
+    # todo, wait restore process
     restore_process.join()
 
-    # todo, stop worker process
-    stop_pool(threads_pool)
+    # todo, signal work pool that restore process is finish
+    signal_pool(threads_pool)
+
+    # todo, wait worker process
+    wait_pool(threads_pool)
     pass
 
 
@@ -147,17 +149,18 @@ def restore_check_thread(share_queue, lock, work_dir, output_service, input_serv
                               share_q=share_queue)
     migrator.start()
     while True:
-        if migrator.is_finish_normal():
-            logger.info("restore_check_process, is finish normal, will exit")
+        if migrator.is_final_finish():
+            logger.info("restore_check_process, is final finish, will exit")
             break
         logger.info("restore_check_process is working, sleep 3 seconds")
         time.sleep(3)
+    time.sleep(6)
     migrator.stop()
+    logger.info("restore_check_process is stopped")
     pass
 
 logger = getLogger(__name__)
 fail_logger = getLogger('migrate_tool.fail_file')
-pool_stop = False
 
 
 def start_pool(threads_pool):
@@ -167,16 +170,23 @@ def start_pool(threads_pool):
     logger.info("multiprocessing thread pool staring done")
 
 
-def stop_pool(threads_pool):
+def signal_pool(threads_pool):
+    logger.info("multiprocessing thread pool signal begin")
+    for p in threads_pool:
+        os.kill(p.pid, signal.SIGUSR1)
+    logger.info("multiprocessing thread pool signal done")
+
+
+def wait_pool(threads_pool):
     logger.info("multiprocessing thread pool join begin")
-    global pool_stop
-    pool_stop = True
     for p in threads_pool:
         p.join()
     logger.info("multiprocessing thread pool join done")
 
 
 def main_():
+    # todo, add signal first
+
     thread_ = Thread(target=main_thread)
     thread_.daemon = True
     thread_.start()
