@@ -30,7 +30,7 @@ def handler_stop(sig, frame):
 
 
 def work_thread(share_queue, lock, work_dir, output_service, input_service):
-    logger.info("multiprocessing pool worker is starting")
+    logger.info("multiprocessing pool worker me: %d, is starting", os.getpid())
     # _filter = Filter(work_dir)
 
     # todo, signal
@@ -52,7 +52,8 @@ def work_thread(share_queue, lock, work_dir, output_service, input_service):
         # check restore process is finish or not
         global restore_process_finish
         if restore_process_finish and share_queue.empty():
-            logger.info("restore process is finish, and share task queue is empty, pool worker me will exit")
+            logger.info("restore process is finish, and share task queue is empty, pool worker me: %d will exit",
+                        os.getpid())
             break
 
         try:

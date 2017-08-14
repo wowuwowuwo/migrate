@@ -111,7 +111,11 @@ def signal_pool(threads_pool):
 def wait_pool(threads_pool):
     logger.info("multiprocessing thread pool join begin")
     for p in threads_pool:
+        while p.is_alive():
+            logger.info("main process is waiting for pool worker: %d", p.pid)
+            p.join(3)
         p.join()
+        logger.info("main process is waiting for pool worker: %d, done", p.pid)
     logger.info("multiprocessing thread pool join done")
 
 
