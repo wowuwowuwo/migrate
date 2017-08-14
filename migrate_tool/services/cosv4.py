@@ -87,22 +87,28 @@ class CosV4StorageService(storage_service.StorageService):
             local_path.encode('utf-8')
         insert_only = 0 if self._overwrite else 1
         for i in range(10):
-            logger.info("upload file: %s, with retry %d, need size: %d", task.key, i, task.size)
+            logger.info("upload from local path: %s, to cos path: %s, with retry %d, need size: %d",
+                        local_path, cos_path, i, task.size)
             try:
-                upload_request = UploadFileRequest(self._bucket, unicode(cos_path), local_path, insert_only=insert_only)
+                upload_request = UploadFileRequest(self._bucket, unicode(cos_path),
+                                                   local_path, insert_only=insert_only)
                 upload_file_ret = self._cos_api.upload_file(upload_request)
 
                 if upload_file_ret[u'code'] != 0:
-                    logger.warn("error: cos path: %s, upload failed: %s", cos_path, str(upload_file_ret))
+                    logger.error("upload from local path: %s, to cos path: %s, retry: %d, error: %s",
+                                 local_path, cos_path, i, str(upload_file_ret))
                     raise OSError("UploadError: " + str(upload_file_ret))
                 else:
-                    logger.info("upload task: %s, to cos path: %s, success, break", task.key, cos_path)
+                    logger.info("upload from local path: %s, to cos path: %s, retry: %d, success, break",
+                                local_path, cos_path, i)
                     break
             except Exception as e:
-                logger.error("try: %d, error: %s", i, str(e))
+                logger.error("upload from local path: %s, to cos path: %s, retry: %d, error: %s",
+                             local_path, cos_path, i, str(e))
                 pass
         else:
-            raise IOError("upload failed")
+            raise IOError("upload from local path: %s, to cos path: %s, failed with 10 retry",
+                          local_path, cos_path)
 
     def list(self):
         if self._prefix_dir is None:

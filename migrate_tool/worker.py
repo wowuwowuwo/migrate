@@ -89,7 +89,8 @@ def work_thread(share_queue, lock, work_dir, output_service, input_service):
                     #     _filter.add(task_path)
                     continue
                 else:
-                    logger.info("finally check task: %s, not exists, will download it", task_path.encode('utf-8'))
+                    logger.info("finally check task: %s, not exists, will download it to local path: %s",
+                                task_path.encode('utf-8'), localpath)
             except Exception as e:
                 # todo, override ?
                 logger.exception("finally check task: %s, exists failed, error: %s", task_path.encode('utf-8'), str(e))
@@ -98,7 +99,8 @@ def work_thread(share_queue, lock, work_dir, output_service, input_service):
             try:
                 output_service.download(task, localpath)
             except Exception as e:
-                logger.exception("finally download task: %s, failed, error: %s", task_path.encode('utf-8'), str(e))
+                logger.exception("finally download task: %s, to local path: %s, failed, error: %s",
+                                 task_path.encode('utf-8'), localpath, str(e))
                 fail_logger.error(task_path)
                 # with lock:
                 #     fail += 1
@@ -109,8 +111,9 @@ def work_thread(share_queue, lock, work_dir, output_service, input_service):
             # step 3, upload file
             try:
                 input_service.upload(task, localpath)
-            except Exception:
-                logger.exception("finally upload task: %s, failed, error: %s", task_path.encode('utf-8'), str(e))
+            except Exception as e:
+                logger.exception("finally upload task: %s, from local path: %s, failed, error: %s",
+                                 task_path.encode('utf-8'), localpath, str(e))
                 # with lock:
                 #     fail += 1
                 fail_logger.error(task_path)

@@ -24,30 +24,37 @@ class OssStorageService(storage_service.StorageService):
     def download(self, task, local_path):
         # self._oss_api.get_object_to_file(urllib.unquote(cos_path).encode('utf-8'), local_path)
         for i in range(20):
-            logger.info("download file: %s, with retry %d, need size: %d", task.key, i, task.size)
-            import os
+            logger.info("download task: %s, to local path: %s, with retry %d, need size: %d",
+                        task.key, local_path, i, task.size)
             try:
-                # os.remove(task.key)
-                # todo, remove localpath first
-                os.remove(local_path)
+                import os
+                try:
+                    # os.remove(task.key)
+                    # todo, remove localpath first
+                    os.remove(local_path)
+                except Exception as e:
+                    logger.error("before download, remove local path: %s, this is normal, warn: %s", local_path, str(e))
+                    pass
+
+                self._oss_api.get_object_to_file(task.key, local_path)
+                if task.size is None:
+                    logger.info("task: %s, size is None, skip check file size on local", task.key)
+                    break
+
+                from os import path
+                if path.getsize(local_path) != int(task.size):
+                    logger.error("download task: %s, to local path: %s, retry: %d, error, local size: %d, task size: %d",
+                                 task.key, local_path, i, path.getsize(local_path), task.size)
+                else:
+                    logger.info("download task: %s, to local path: %s, retry: %d, success, break",
+                                task.key, local_path, i)
+                    break
             except Exception as e:
-                logger.error("before download, remove local path: %s, this is normal, warn: %s", local_path, str(e))
+                logger.error("download task: %s, to local path: %s, retry: %d, error: %s",
+                             task.key, local_path, i, str(e))
                 pass
-
-            self._oss_api.get_object_to_file(task.key, local_path)
-            if task.size is None:
-                logger.info("task: %s, size is None, skip check file size on local", task.key)
-                break
-
-            from os import path
-            if path.getsize(local_path) != int(task.size):
-                logger.error("error: download: %s, retry: %d, failed, local size: %d, task size: %d",
-                             task.key, i, path.getsize(local_path), task.size)
-            else:
-                logger.info("download: %s, Successfully, break", task.key)
-                break
         else:
-            raise IOError("download: %s, failed with 20 retry", task.key)
+            raise IOError("download task: %s, to local path: %s, failed with 20 retry", task.key, local_path)
 
     def upload(self, cos_path, local_path):
         raise NotImplementedError
